@@ -4,7 +4,7 @@ import org.bouncycastle.jce.provider.BouncyCastleProvider
 import java.security.Security
 
 /*
-How SOLID is Applied:
+    How SOLID is Applied:
 
 	1.	Single Responsibility Principle (SRP):
 	•	Each class has a single responsibility:
@@ -25,10 +25,10 @@ How SOLID is Applied:
 	•	The EncryptionApp class depends on the abstractions (EncryptionManager, ECCKeyManager, KeyPairGeneratorManager)
 	rather than specific implementations. This allows for easier testing and flexibility in extending the system in the future.
 
-Conclusion:
+    Conclusion:
 
-This refactored code now follows the SOLID principles, making it more flexible, maintainable, and scalable.
-You can easily add new cryptographic algorithms or modify the existing logic without affecting the overall structure.
+    This refactored code now follows the SOLID principles, making it more flexible, maintainable, and scalable.
+    You can easily add new cryptographic algorithms or modify the existing logic without affecting the overall structure.
  */
 
 fun main() {
