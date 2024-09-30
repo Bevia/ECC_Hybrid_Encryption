@@ -24,9 +24,7 @@ Comparison with RSA:
 ## Conclusion:
 
 # ECC Insights
-You do not need to use RSA if you’re using ECC for encryption and decryption. ECC is sufficient on its own when used in a hybrid encryption scheme. If you’re looking for smaller key sizes and better efficiency, ECC is a good choice.
-
-you should use an AES key (or another symmetric encryption algorithm) to encrypt the actual data when using ECC for encryption. This approach is called hybrid encryption, and it is the most common and efficient way to handle large amounts of data securely.
+You should use an AES key (or another symmetric encryption algorithm) to encrypt the actual data when using ECC for encryption. This approach is called hybrid encryption, and it is the most common and efficient way to handle large amounts of data securely.
 
 Why Use AES in Combination with ECC?
 
