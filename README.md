@@ -90,3 +90,40 @@ Summary:
 
 In most cases, you should use the hybrid scheme because it balances both security and performance better than using ECC alone.
 
+## User case
+
+In a hybrid encryption scheme like the one we discussed, Bob would send two things to Alice:
+
+	1.	The Encrypted Message: This is the actual message (e.g., “this is my secret message”) that is encrypted using a symmetric key (in this case, AES). The symmetric encryption ensures that the message can be encrypted and decrypted efficiently, even if the message is large.
+	2.	The Encrypted AES Key: Since the AES key is needed to decrypt the message, Bob encrypts the AES key using Alice’s public ECC key. This way, only Alice (who holds the corresponding private ECC key) can decrypt the AES key and then use it to decrypt the actual message.
+
+So, to summarize:
+
+	•	Encrypted Message: The message encrypted using the AES key.
+	•	Encrypted AES Key: The AES key encrypted using Alice’s public ECC key.
+
+The Process in Detail:
+
+	1.	Bob’s Side (Encrypting and Sending)
+	•	Bob generates an AES key.
+	•	Bob encrypts the message using the AES key.
+	•	Bob encrypts the AES key using Alice’s ECC public key.
+	•	Bob sends both the AES-encrypted message and the ECC-encrypted AES key to Alice.
+	2.	Alice’s Side (Receiving and Decrypting)
+	•	Alice receives the AES-encrypted message and the ECC-encrypted AES key.
+	•	Alice decrypts the AES key using her ECC private key.
+	•	Alice then uses the decrypted AES key to decrypt the AES-encrypted message.
+
+Visual Representation:
+
+	•	Bob to Alice:
+	•	Encrypted Message: AES(message)
+	•	Encrypted AES Key: ECC(AES key)
+
+Alice uses the decrypted AES key to read the original message.
+
+Why Does Bob Send Both?
+
+	•	The AES-encrypted message ensures efficient encryption and decryption, even if the message is large.
+	•	The ECC-encrypted AES key ensures that only Alice can decrypt the AES key, maintaining the security of the entire communication.
+
