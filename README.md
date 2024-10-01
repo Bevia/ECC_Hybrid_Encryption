@@ -1,10 +1,10 @@
-# ECC_Hybrid_Encryption
+# ECC Hybrid Encryption
 
 ## How ECC works in Encryption and Decryption:
 
 ECC doesn’t directly encrypt or decrypt messages like symmetric encryption (e.g., AES), but it is used for key exchange and digital signatures. In practice, the encryption and decryption process using ECC follows these steps:
 
-	1.	Key Generation: Each party generates a public and private key pair using ECC.
+	1.	Key Generation: Each party uses ECC to generate a public and private key pair.
 	•	The private key is a randomly selected integer.
 	•	The public key is derived from the private key using an elliptic curve equation.
 	2.	Encryption (via Hybrid Encryption):
