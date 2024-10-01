@@ -21,8 +21,6 @@ Comparison with RSA:
 	•	ECC Advantages: ECC can offer the same level of security as RSA with much smaller keys (e.g., a 256-bit ECC key provides similar security to a 3072-bit RSA key). This results in faster computations, lower power consumption, and less storage or transmission bandwidth.
 	•	RSA Advantages: RSA is more established, and there are more well-known implementations and libraries. However, its key sizes and computational cost are higher for the same security level compared to ECC.
 
-## Conclusion:
-
 # ECC Insights
 You should use an AES key (or another symmetric encryption algorithm) to encrypt the actual data when using ECC for encryption. This approach is called hybrid encryption, and it is the most common and efficient way to handle large amounts of data securely.
 
